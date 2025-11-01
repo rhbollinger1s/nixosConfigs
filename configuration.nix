@@ -146,7 +146,6 @@ services.greetd = {
     cmatrix
     neovim
     asciiquarium
-    cmatrix
     htop
     lolcat
     nano
@@ -224,6 +223,15 @@ system.autoUpgrade.allowReboot = false;
   };
   # Enable OpenSSH
   services.openssh.enable = true;
+  #ollama
+  #services.ollama = {
+  #enable = true;
+  #acceleration = "cuda";
+  #};
+  #OpenWebUI for ollama
+  #services.open-webui.enable = true;
+# ----- [ FLAKES ] ------------------------------
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 # ----- [ FIREWALL ] ------------------------------
   # Still in progress...
